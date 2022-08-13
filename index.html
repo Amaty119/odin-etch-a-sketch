@@ -8,18 +8,23 @@
         <link rel = "stylesheet" href = "./style.css">
     </head>
     <body>
-        <div class = "title">Etch a Sketch</div>
+        <div class = "title">Etch-a-Sketch</div>
 
         <div class = m1>
             <div id = "container"></div>
         </div>
         
-        
+        <span id = "value"></span>
+
         <div class = "slide">
-            <input type = "range" min "4" max "64" value = "16" class = "slider" id = "slide">
+            <input type = "range" min = "4" max = "64" value = "16" class = "slider" id = "slide">
         </div>
 
-        <p>Value: <span id = "value"></span></p>
+        <div class = "buttons">
+            <button class = "button" id = "penBtn">Black Pen</button> 
+            <button class = "button" id = "clearBtn">Clear Board</button> 
+            <button class = "button" id = "eraserBtn">Eraser</button> 
+        </div>
 
         <script src = "javascript.js" defer></script>
 

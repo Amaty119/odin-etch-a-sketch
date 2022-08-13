@@ -1,4 +1,17 @@
-    const gridBoxes = document.querySelectorAll(".innerClass");
-    gridBoxes.forEach((gridbox) => {
-        gridbox.classList.remove("active");
-    })
+if(color == 0) {
+        gridBoxes.forEach((gridBox) => {
+            gridBox.addEventListener("mouseover", (e) => {
+                if(e.buttons == 0) {
+                    gridBox.classList.add(".active0");
+                }
+            });
+        });
+    } else {
+        gridBoxes.forEach((gridBox) => {
+            gridBox.addEventListener("mouseover", (e) => {
+                if(e.buttons == 1) {
+                    gridBox.classList.add(".active1");
+                }
+            });
+        });
+    }

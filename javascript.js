@@ -1,7 +1,11 @@
 const container = document.querySelector("#container");
+const penBtn = document.querySelector("#penBtn");
+const clearBtn = document.querySelector("#clearBtn");
+const eraserBtn = document.querySelector("#eraserBtn");
 let size = document.querySelector("#slide");
 let value = document.querySelector("#value");
-value.textContent = size.value;
+value.textContent = size.value + " x " + size.value;
+let color = 0;
 
 
 function createGrid (gridSize) {
@@ -37,7 +41,12 @@ function draw() {
     gridBoxes.forEach((gridBox) => {
         gridBox.addEventListener("mouseover", (e) => {
             if(e.buttons == 1) {
-                gridBox.classList.add("active");
+                if(color == 0)
+                {
+                    gridBox.classList.add("active");
+                } else {
+                    gridBox.classList.remove("active");
+                }
             }
         });
     });
@@ -46,9 +55,21 @@ function draw() {
 size.addEventListener("click", () => {
     clearGrid();
     createGrid(size.value);
-    value.textContent = size.value;
+    value.textContent = size.value + " x " + size.value;
     draw();
-})
+});
+
+clearBtn.addEventListener("click", () => {
+    const gridBoxes = document.querySelectorAll(".innerClass");
+    gridBoxes.forEach((gridBox) => {
+        gridBox.classList.remove("active");
+    });
+});
+
+penBtn.addEventListener("click", () => color = 0);
+eraserBtn.addEventListener("click", () => color = 1);
+
+    
 
 createGrid(size.value);
 draw();
