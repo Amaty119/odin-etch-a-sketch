@@ -40,16 +40,20 @@ function draw() {
     const gridBoxes = document.querySelectorAll(".innerClass");
     gridBoxes.forEach((gridBox) => {
         gridBox.addEventListener("mouseover", (e) => {
-            if(e.buttons == 1) {
-                if(color == 0)
-                {
-                    gridBox.classList.add("active");
-                } else {
-                    gridBox.classList.remove("active");
-                }
-            }
+            if(e.buttons == 1) {paint(gridBox);}
+        });
+        gridBox.addEventListener("mouseup", (e) => {
+            if(e.buttons == 0) {paint(gridBox);}
         });
     });
+}
+
+function paint(gridBox) {
+        if(color == 0) {
+            gridBox.classList.add("active");
+        } else {
+            gridBox.classList.remove("active");
+    }
 }
 
 size.addEventListener("click", () => {

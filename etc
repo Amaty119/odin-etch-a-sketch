@@ -1,17 +1,15 @@
-if(color == 0) {
-        gridBoxes.forEach((gridBox) => {
-            gridBox.addEventListener("mouseover", (e) => {
-                if(e.buttons == 0) {
-                    gridBox.classList.add(".active0");
+gridBoxes.forEach((gridBox) => {
+    container.addEventListener("mousedown", () =>{ 
+        gridBox.addEventListener("mouseover", (e) => {
+            console.log(e.buttons);
+            if(e.buttons == 1) {
+                if(color == 0)
+                {   
+                    gridBox.classList.add("active");
+                } else {
+                    gridBox.classList.remove("active");
                 }
-            });
-        });
-    } else {
-        gridBoxes.forEach((gridBox) => {
-            gridBox.addEventListener("mouseover", (e) => {
-                if(e.buttons == 1) {
-                    gridBox.classList.add(".active1");
-                }
-            });
-        });
-    }
+            }
+        });      
+    });
+});
