@@ -114,3 +114,27 @@ body {
     transform: scale(1.1);
     cursor: pointer;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    text-align: center;
+    padding: 3vh;
+    gap: 15px;
+  }
+
+  .github {
+    height: 4vh;
+    transition: transform 1s;
+  }
+
+  .github:hover {
+    transform: rotate(1080deg);
+  }
