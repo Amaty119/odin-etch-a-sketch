@@ -1,0 +1,35 @@
+.body {
+    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.outerClass {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: thick solid black;
+    width: 20vh;
+    height: 5vh;
+}
+
+.innerClass {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5vh;
+    height: 5vh;
+    opacity:0;
+    transition:0s 180s;
+}
+
+.innerClass:active:hover {
+    background-color: black;
+    color: black;
+    cursor: pointer;
+    opacity:1;
+    transition:0s;
+}
