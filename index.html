@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch a Sketch</title>
-    <link rel = "stylesheet" href = "./style.css">
-    <script src = "javascript.js" defer></script>
-</head>
-<body>
-    <div class = "title">Etch a Sketch</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etch a Sketch</title>
+        <link rel = "stylesheet" href = "./style.css">
+    </head>
+    <body>
+        <div class = "title">Etch a Sketch</div>
 
-    <div id = "container"></div>
-    
-</body>
+        <div class = m1>
+            <div id = "container"></div>
+        </div>
+        
+        
+        <div class = "slide">
+            <input type = "range" min "4" max "64" value = "16" class = "slider" id = "slide">
+        </div>
+
+        <p>Value: <span id = "value"></span></p>
+
+        <script src = "javascript.js" defer></script>
+
+    </body>
 </html>

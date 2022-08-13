@@ -10,19 +10,27 @@ body {
     font-size: 48px;
     font-weight: bold;
     padding: 32px;
+    background-color: #CDB4DB;
 }
+
+.m1 {
+    background-color: #BDE0FE;
+}
+
 #container {
     width: 40vh;
     height: 40vh;
     margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
     border: 10px solid black;
+    background-color: white;
 }
 
 .outerClass {
     display: flex;
     flex-direction: row;
     width: 40vh;
-    height: 10vh;
     margin: auto;
     margin-top: 0;
 
@@ -30,17 +38,21 @@ body {
 
 .innerClass {
     display: flex;
-    background-color: black;
     flex-direction: column;
     justify-content: center;
     width: 10vh;
     height: 10vh;
-    opacity:0;
-    transition:0s 180s;
 }
 
-.innerClass:active:hover {
+.active {
     cursor: pointer;
-    opacity:1;
-    transition:0s;
+    background-color: black;
+}
+
+.slide {
+    margin: auto;
+    padding: 32px;
+}
+.slider {
+    width: 20vh;
 }

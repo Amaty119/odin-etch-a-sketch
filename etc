@@ -1,0 +1,4 @@
+    const gridBoxes = document.querySelectorAll(".innerClass");
+    gridBoxes.forEach((gridbox) => {
+        gridbox.classList.remove("active");
+    })
